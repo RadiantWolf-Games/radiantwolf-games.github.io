@@ -73,7 +73,7 @@ a:hover{text-decoration:underline}
 }
 .hero .inner{position:relative; padding:88px 24px 96px; text-align:center}
 .hero h1{font-family:'Creepster', cursive; font-size:clamp(2.4rem, 6vw, 4.2rem); line-height:1.1; margin:0 0 8px;
-         color:#fff; text-shadow:0 0 24px rgba(183,255,90,.35), 0 0 2px #fff;}
+         color:#fff; text-shadow:0 0 24px rgba(183,255,90,.15), 0 0 2px #fff;}
 .hero p{max-width:780px; margin:0 auto 28px; color:#d7dbe0; opacity:1}
 .badges{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
 
@@ -81,7 +81,7 @@ a:hover{text-decoration:underline}
          background:rgba(183,255,90,.08); color:#e9ffe1; border:1px solid rgba(183,255,90,.25); font-weight:600; letter-spacing:.02em}
 .spark{display:inline-block; width:8px; height:8px; border-radius:999px; background:var(--neon); box-shadow:0 0 12px var(--neon), 0 0 40px var(--neon)}
 
-.section{padding:56px 0}
+.section{padding:56px 24px}
 .section h2{font-family:'Creepster', cursive; font-size:2rem; margin:0 0 6px}
 .section .lead{color:#c7ccd3; margin:0 0 24px}
 
