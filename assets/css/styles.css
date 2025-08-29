@@ -1,0 +1,113 @@
+/* Match FEAR – shared theme (reuse for privacy.html as well)
+   Drop into assets/css/styles.css and link with <link rel="stylesheet" href="assets/css/styles.css"> 
+*/
+:root{
+  --bg-0:#0a0b0e;
+  --bg-1:#0f1319;
+  --panel:#121821;
+  --ink:#e6e7ea;
+  --muted:#97a1ab;
+  --accent:#e11d48;     /* crimson crack from the gem */
+  --neon:#b7ff5a;       /* eerie sword/particle green */
+  --link:#c7d2fe;
+  --ring:rgba(183,255,90,.35);
+  --shadow:rgba(0,0,0,.45);
+  --maxw:1100px;
+  --radius:18px;
+}
+
+@font-face{font-family:'Creepster'; font-style:normal; font-weight:400; font-display:swap;
+src: local('Creepster'), url('https://fonts.gstatic.com/s/creepster/v13/AlZy_zVUqJz4yMrniH4Rcn35.woff2') format('woff2');}
+@font-face{font-family:'Inter'; font-style:normal; font-weight:400; font-display:swap;
+src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtU.woff2') format('woff2');}
+@font-face{font-family:'Inter'; font-style:normal; font-weight:700; font-display:swap;
+src: local('Inter Bold'), url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtU.woff2') format('woff2');}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:radial-gradient(1200px 700px at 60% -10%, rgba(183,255,90,.05), transparent 60%),
+linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 60%, #07090b 100%);
+color:var(--ink); font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; line-height:1.6;
+}
+
+a{color:var(--link); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.container{max-width:var(--maxw); margin-inline:auto; padding:24px;}
+
+.header{
+  position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px);
+  background:linear-gradient(180deg, rgba(10,11,14,.85), rgba(10,11,14,.35));
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
+.brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.08em}
+.brand img{width:32px; height:32px; image-rendering:-webkit-optimize-contrast}
+.brand .wordmark{font-family:'Creepster', cursive; font-size:1.45rem; color:#fff; text-shadow:0 0 22px rgba(183,255,90,.35), 0 0 2px #fff;}
+.nav a{opacity:.9}
+.nav a:hover{opacity:1}
+
+.btn{display:inline-block; padding:.8rem 1.1rem; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:#0f141a; 
+     box-shadow:0 10px 25px var(--shadow), inset 0 0 0 1px rgba(255,255,255,.04); font-weight:600}
+.btn.primary{background:linear-gradient(180deg, #16241f, #0d1712); border-color:rgba(183,255,90,.25); color:#eaffea; 
+             box-shadow:0 0 30px rgba(183,255,90,.18), inset 0 0 40px rgba(183,255,90,.035)}
+.btn.primary:hover{box-shadow:0 0 38px rgba(183,255,90,.28)}
+.btn.ghost{background:transparent}
+.sep{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent); margin:8px 0 0}
+
+.hero{
+  position:relative; overflow:hidden; border-bottom:1px solid rgba(255,255,255,.08);
+  background: #07090b;
+}
+.hero .bg{
+  position:absolute; inset:0; background-size:cover; background-position:center;
+  filter:contrast(1.05) saturate(1) brightness(.72); transform:scale(1.02);
+}
+.hero::after{ /* soft vignette */
+  content:""; position:absolute; inset:0;
+  background:radial-gradient(60% 50% at 50% 30%, rgba(0,0,0,.2), rgba(0,0,0,.75)),
+             linear-gradient(180deg, rgba(0,0,0,.25), transparent 30%, rgba(0,0,0,.8) 100%);
+  pointer-events:none;
+}
+.hero .inner{position:relative; padding:88px 24px 96px; text-align:center}
+.hero h1{font-family:'Creepster', cursive; font-size:clamp(2.4rem, 6vw, 4.2rem); line-height:1.1; margin:0 0 8px;
+         color:#fff; text-shadow:0 0 24px rgba(183,255,90,.35), 0 0 2px #fff;}
+.hero p{max-width:780px; margin:0 auto 28px; color:#d7dbe0; opacity:.92}
+.badges{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+
+.tagline{display:inline-flex; gap:10px; align-items:center; padding:.35rem .7rem; border-radius:9999px; 
+         background:rgba(183,255,90,.08); color:#e9ffe1; border:1px solid rgba(183,255,90,.25); font-weight:600; letter-spacing:.02em}
+.spark{display:inline-block; width:8px; height:8px; border-radius:999px; background:var(--neon); box-shadow:0 0 12px var(--neon), 0 0 40px var(--neon)}
+
+.section{padding:56px 0}
+.section h2{font-family:'Creepster', cursive; font-size:2rem; margin:0 0 6px}
+.section .lead{color:#c7ccd3; margin:0 0 24px}
+
+.features{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius); padding:20px; box-shadow:0 20px 40px var(--shadow)}
+.card h3{margin:0 0 6px; font-size:1.1rem}
+.card p{margin:0; color:#c1c6cd}
+
+.gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px}
+.tile{position:relative; border-radius:16px; overflow:hidden; border:1px solid rgba(255,255,255,.08);
+      aspect-ratio:16/9; background:#0b0e12}
+.tile img{width:100%; height:100%; object-fit:cover; filter:contrast(1.05) saturate(1.05) brightness(.9)}
+.tile::after{content:""; position:absolute; inset:0; box-shadow:inset 0 0 0 1px rgba(255,255,255,.06), inset 0 -80px 120px rgba(0,0,0,.6)}
+.tile .caption{position:absolute; left:12px; bottom:10px; font-weight:600; text-shadow:0 2px 18px #000}
+
+.about{display:grid; grid-template-columns:1.1fr .9fr; gap:26px}
+.about p{color:#c9cdd4}
+.about .panel{border-radius:var(--radius); overflow:hidden; border:1px solid rgba(255,255,255,.08); background:#0b0e12}
+.about .panel img{display:block; width:100%; height:100%; object-fit:cover; opacity:.92}
+
+.footer{margin-top:48px; padding:24px 0 56px; border-top:1px solid rgba(255,255,255,.08); color:#9aa4ac}
+.footer .cols{display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px}
+.small{font-size:.92rem; opacity:.9}
+
+.notice{padding:16px; border:1px dashed rgba(255,255,255,.2); border-radius:14px; background:rgba(225,29,72,.06)}
+
+@media (max-width: 880px){
+  .about{grid-template-columns:1fr}
+  .hero .inner{padding:72px 24px 84px}
+}

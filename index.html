@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Match FEAR — Official Site</title>
+  <meta name="description" content="Match FEAR is a horror-themed match puzzler with EOS-powered online & friend leaderboards.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="assets/images/Icon.png" type="image/png">
+  <meta property="og:title" content="Match FEAR">
+  <meta property="og:description" content="A horror-themed match puzzler with online & friend leaderboards.">
+  <meta property="og:image" content="assets/images/MenuScreen.png">
+  <meta name="theme-color" content="#0b0e12">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="./">
+        <img alt="Match FEAR icon" src="assets/images/Icon.png" width="32" height="32">
+        <span class="wordmark">Match FE4R</span>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="#features">Features</a> &nbsp;·&nbsp;
+        <a href="#gallery">Screens</a> &nbsp;·&nbsp;
+        <a href="#about">About</a> &nbsp;·&nbsp;
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <div class="sep"></div>
+  </header>
+
+  <section class="hero" style="--hero-image:url('assets/images/EnchantedForest_Preview.png')">
+    <div class="bg" style="background-image:var(--hero-image)"></div>
+    <div class="inner container">
+      <span class="tagline"><span class="spark"></span> Horror Match Puzzler</span>
+      <h1>Face the board. Feed the fear.</h1>
+      <p>Slide and match cursed gems while something watches from the dark. <strong>Match FEAR</strong> blends tense atmosphere with fast, strategic play — and <em>Epic Online Services</em> leaderboards to compete with friends & the world.</p>
+      <div class="badges">
+        <a class="btn primary" href="#" aria-label="Wishlist or download">Wishlist / Download</a>
+        <a class="btn ghost" href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section container" id="features">
+      <h2>Features</h2>
+      <p class="lead">Designed to be easy to pick up, hard to put down — and just unsettling enough.</p>
+      <div class="features">
+        <article class="card">
+          <h3>EOS Auth</h3>
+          <p>Seamless sign-in powered by Epic Online Services. No extra accounts, no friction.</p>
+        </article>
+        <article class="card">
+          <h3>Global & Friend Leaderboards</h3>
+          <p>Climb worldwide rankings and see how you stack up against your friends.</p>
+        </article>
+        <article class="card">
+          <h3>Atmospheric Levels</h3>
+          <p>Haunted cabins, raging oceans, moonlit graveyards, and enchanted forests — each with its own mood.</p>
+        </article>
+        <article class="card">
+          <h3>Tight Core Loop</h3>
+          <p>Satisfying matches, escalating pressure, and reactive sound design keep the tension rising.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="gallery">
+      <h2>Screens & Art</h2>
+      <p class="lead">A peek into the world of Match FEAR.</p>
+      <div class="gallery">
+        <figure class="tile"><img src="assets/images/Gameplay_HauntedCabin.png" alt="Gameplay in the Haunted Cabin level"><figcaption class="caption">Gameplay — Haunted Cabin</figcaption></figure>
+        <figure class="tile"><img src="assets/images/MenuScreen.png" alt="Main menu with Match FEAR logo"><figcaption class="caption">Main Menu</figcaption></figure>
+        <figure class="tile"><img src="assets/images/HauntedCabin_Preview.png" alt="Haunted cabin scene"><figcaption class="caption">The Haunted Cabin</figcaption></figure>
+        <figure class="tile"><img src="assets/images/TheGraveyard_Preview.jpg" alt="Graveyard at night"><figcaption class="caption">The Graveyard</figcaption></figure>
+        <figure class="tile"><img src="assets/images/RagingOcean_Preview.png" alt="Raging ocean with ship and tornado"><figcaption class="caption">The Raging Ocean</figcaption></figure>
+        <figure class="tile"><img src="assets/images/EnchantedForest_Preview.png" alt="Enchanted forest with glowing tree"><figcaption class="caption">The Enchanted Forest</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section container about" id="about">
+      <div>
+        <h2>About the Game</h2>
+        <p><strong>Match FEAR</strong> is an indie passion project — a moody match puzzler that trades bright candy for shadow and dread. It’s built in Unreal and integrates EOS for auth and competitive leaderboards.</p>
+        <p>Press and creators can use any images above. For inquiries, reach out via email.</p>
+        <div class="notice small">Brand assets & screenshots © Match FEAR. All rights reserved.</div>
+      </div>
+      <div class="panel">
+        <img src="assets/images/HauntedCabin_Preview.png" alt="Atmospheric scene from Match FEAR">
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container cols">
+      <div class="small">© <span id="year"></span> Match FEAR</div>
+      <div class="small"><a href="privacy.html">Privacy</a></div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
