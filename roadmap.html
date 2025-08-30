@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roadmap — Match FEAR</title>
+  <meta name="description" content="Roadmap for Match FEAR">
+  <link rel="icon" href="assets/images/Icon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="./">
+        <img alt="Match FEAR icon" src="assets/images/Icon.png" width="32" height="32">
+        <span class="wordmark">Match FE4R</span>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="./#features">Features</a> &nbsp;·&nbsp;
+        <a href="./#gallery">Screens</a> &nbsp;·&nbsp;
+        <a href="./#about">About</a> &nbsp;·&nbsp;
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <div class="sep"></div>
+  </header>
+
+  <main class="container section">
+    <h1 style="font-family:'Creepster',cursive; margin-top:0">v1.0.0 Roadmap</h1>
+
+    <p>This page contains the roadmap for the 1.0.0 release</p>
+
+    <h2>Known issues</h2>
+	<ul>
+		<li>Cabin eye powerup in the foreground is not properly highlighted (game light disabled after recent optimizations)</li>
+		<li>Quit doesn't really quit on Android</li>
+		<li>Quit does nothing in WebGL</li>
+		<li>No resolutions in WebGL</li>
+	</ul>
+
+    <h2>Improvements</h2>
+	<ul>
+		<li>Different (better) game name</li>
+		<li>Higher contrast menu title</li>
+		<li>Higher contrast game icon</li>
+		<li>Better gem in-game in main menu</li>
+	</ul>
+
+    <h2>Link EOS policies</h2>
+	<ul>
+		<li>Website domain</li>
+		<li>Link https://wickedfox-games.github.io/</li>
+		<li>Link https://wickedfox-games.github.io/privacy.html</li>
+	</ul>
+	
+    <h2>Website improvements</h2>
+	<ul>
+		<li>New icon</li>
+		<li>Brighter images</li>
+		<li>Better font</li>
+		<li>New title / description / icon / name</li>
+	</ul>
+	
+    <h2>Socials</h2>
+	<ul>
+		<li>New promo images</li>
+		<li>Development log update</li>
+		<li>Post on X / Reddit / Epic EOS games forum</li>
+	</ul>
+  </main>
+
+  <footer class="footer">
+    <div class="container cols">
+      <div class="small">© <span id="year"></span> WickedFox Games</div>
+      <div class="small"><a href="./">Home</a></div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('pp-date').textContent=new Date().toISOString().slice(0,10);
+  </script>
+</body>
+</html>
