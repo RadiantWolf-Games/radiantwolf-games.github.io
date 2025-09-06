@@ -55,6 +55,8 @@ a:hover{text-decoration:underline}
              box-shadow:0 0 30px rgba(183,255,90,.18), inset 0 0 40px rgba(183,255,90,.035)}
 .btn.primary:hover{box-shadow:0 0 38px rgba(183,255,90,.28)}
 .btn.ghost{background:transparent}
+/* Small button variant for secondary CTAs */
+.btn.sm{ padding:.6rem .8rem; font-size:.95rem; display:inline-flex; gap:.5rem; align-items:center }
 .sep{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.08), transparent); margin:8px 0 0}
 
 .hero{
