@@ -18,8 +18,6 @@
   --logo-size:64px; /* ~2x the old 32px */
 }
 
-@font-face{font-family:'Creepster'; font-style:normal; font-weight:400; font-display:swap;
-src: local('Creepster'), url('https://fonts.gstatic.com/s/creepster/v13/AlZy_zVUqJz4yMrniH4Rcn35.woff2') format('woff2');}
 @font-face{font-family:'Inter'; font-style:normal; font-weight:400; font-display:swap;
 src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtU.woff2') format('woff2');}
 @font-face{font-family:'Inter'; font-style:normal; font-weight:700; font-display:swap;
@@ -45,7 +43,7 @@ a:hover{text-decoration:underline}
 .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding-top:6px; padding-bottom:6px}
 .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.08em}
 .brand img{width:var(--logo-size); height:var(--logo-size); image-rendering:-webkit-optimize-contrast}
-.brand .wordmark{font-family:'Creepster', cursive; font-size:1.45rem; color:#fff; text-shadow:0 0 22px rgba(183,255,90,.35), 0 0 2px #fff;}
+.brand .wordmark{font-family:'Estonia', cursive; font-size:2.5rem; color:#fff; text-shadow:0 0 22px rgba(183,255,90,.35), 0 0 2px #fff; line-height: 2rem;}
 .nav a{opacity:.9}
 .nav a:hover{opacity:1}
 
@@ -74,7 +72,7 @@ a:hover{text-decoration:underline}
   pointer-events:none;
 }
 .hero .inner{position:relative; padding:88px 24px 96px; text-align:center}
-.hero h1{font-family:'Creepster', cursive; font-size:clamp(2.4rem, 6vw, 4.2rem); line-height:1.1; margin:0 0 8px;
+h1{font-family:'Estonia', cursive; font-size:clamp(3.2rem, 6vw, 5.2rem); line-height:1.1; margin:0 0 8px;
          color:#fff; text-shadow:0 0 24px rgba(183,255,90,.15), 0 0 2px #fff;}
 .hero p{max-width:780px; margin:0 auto 28px; color:#d7dbe0; opacity:1}
 .badges{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
@@ -84,7 +82,7 @@ a:hover{text-decoration:underline}
 .spark{display:inline-block; width:8px; height:8px; border-radius:999px; background:var(--neon); box-shadow:0 0 12px var(--neon), 0 0 40px var(--neon)}
 
 .section{padding:56px 24px}
-.section h2{font-family:'Creepster', cursive; font-size:2rem; margin:0 0 6px}
+.section h2{font-family:'Estonia', cursive; font-size:4rem; margin:0 0 6px; line-height: 1;}
 .section .lead{color:#c7ccd3; margin:0 0 24px}
 
 .features{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:18px}
