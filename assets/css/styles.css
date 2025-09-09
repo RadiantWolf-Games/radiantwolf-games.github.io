@@ -130,52 +130,24 @@ h1{font-family:'Estonia', cursive; font-size:clamp(3.2rem, 6vw, 5.2rem); line-he
 }
 
 /* Lightbox */
+/* Lightbox */
 .gallery .tile img,
 .about .panel img,
 img[data-lightbox] { cursor: zoom-in; }
+
 #lightbox[hidden] { display: none; }
-#lightbox {
-  position: fixed; inset: 0; display: grid; place-items: center; padding: 2rem;
-  background: rgba(0,0,0,.75); z-index: 1000; animation: lb-fade .15s ease-out;
-}
-#lightbox img {
-  max-width: min(92vw, 1400px); max-height: 92vh;
-  border-radius: 12px; box-shadow: 0 12px 48px rgba(0,0,0,.6); cursor: zoom-out;
-}
-@keyframes lb-fade { from { opacity: 0 } to { opacity: 1 } }
-body.lb-open { overflow: hidden; }
 
-/* Grey frame around the modal image */
-#lightbox img {
-  --lb-frame-color: #181e26;          /* tweak to taste */
-  --lb-frame-thickness: 4px;         /* thickness of the frame */
-
-  border-radius: 4px;
-  /* First shadow = solid ring (the frame), second = drop shadow */
-  box-shadow:
-    0 0 0 var(--lb-frame-thickness) var(--lb-frame-color),
-    0 12px 48px rgba(0,0,0,.6);
-}
-
-/* Optional: if your modal images have transparent edges, this fills behind them */
-#lightbox img { background: #3a3f47; }
-
-/* Overlay: mobile-safe centering */
-#lightbox[hidden] { display: none; }
 #lightbox {
   position: fixed;
-  inset: 0;
-  display: flex;
+  left: 0; right: 0; top: 0;           /* omit bottom so height takes effect */
+  height: 100vh;                        /* fallback */
+  height: 100dvh;                       /* visual viewport on mobile */
+  display: flex;                        /* robust centering */
   align-items: center;
   justify-content: center;
 
-  /* Base + modern + JS fallback (last wins) */
-  height: 100vh;           /* baseline */
-  height: 100dvh;          /* uses the visual viewport on mobile */
-  height: calc(var(--vh, 1vh) * 100); /* JS polyfill below */
-
+  /* Mobile-safe padding + notches/home indicators */
   padding: 12px;
-  /* Respect notches/home indicators where supported */
   padding-top:    calc(12px + env(safe-area-inset-top));
   padding-right:  calc(12px + env(safe-area-inset-right));
   padding-bottom: calc(12px + env(safe-area-inset-bottom));
@@ -183,20 +155,28 @@ body.lb-open { overflow: hidden; }
 
   background: rgba(0,0,0,.85);
   z-index: 1000;
+  animation: lb-fade .15s ease-out;
   overscroll-behavior: contain;
 }
 
-/* Image: keep it centered and contained */
 #lightbox img {
-  display: block;              /* avoid inline baseline quirks */
-  margin: 0;                   /* center is handled by flex */
+  display: block;                       /* avoid inline baseline quirks */
+  cursor: zoom-out;
   max-width: min(96vw, 1400px);
   max-height: calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-  border-radius: 14px;
+  background: #3a3f47;
+
+  /* Grey frame around the modal image */
+  --lb-frame-color: #181e26;            /* tweak to taste */
+  --lb-frame-thickness: 4px;            /* thickness of the frame */
+  border-radius: 4px;
+  /* First shadow = solid ring (the frame), second = drop shadow */
   box-shadow:
-    0 0 0 14px #3a3f47,        /* your grey frame */
+    0 0 0 var(--lb-frame-thickness) var(--lb-frame-color),
     0 12px 48px rgba(0,0,0,.6);
 }
 
-/* Prevent background page from shifting/scrolling when open */
+@keyframes lb-fade { from { opacity: 0 } to { opacity: 1 } }
+
+/* Prevent background page from scrolling while open */
 body.lb-open { overflow: hidden; touch-action: none; }
