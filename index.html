@@ -117,6 +117,68 @@
       <div class="small"><a href="privacy.html">Privacy</a></div>
     </div>
   </footer>
+  
+  <!-- Lightbox overlay -->
+<div id="lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true">
+  <img id="lightbox-img" alt="">
+</div>
+<script>
+(function () {
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+
+  function pickLargestFromSrcset(img) {
+    const srcset = img.getAttribute('srcset');
+    if (!srcset) return null;
+    // Parse "url 300w, url 800w, ..." and return the largest
+    const candidates = srcset.split(',')
+      .map(s => s.trim().split(/\s+/))
+      .map(([url, size]) => ({ url, w: parseInt(size, 10) || 0 }))
+      .sort((a, b) => a.w - b.w);
+    return candidates.length ? candidates[candidates.length - 1].url : null;
+  }
+
+  function fullSrcFor(img) {
+    return img.dataset.full || pickLargestFromSrcset(img) || img.currentSrc || img.src;
+  }
+
+  function openLightbox(img) {
+    lbImg.src = fullSrcFor(img);
+    lbImg.alt = img.alt || '';
+    lb.hidden = false;
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lb-open');
+  }
+
+  function closeLightbox() {
+    lb.hidden = true;
+    lb.setAttribute('aria-hidden', 'true');
+    lbImg.removeAttribute('src'); // free memory / allow reload
+    document.body.classList.remove('lb-open');
+  }
+
+  // Delegated click: works for all current/future images
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('img');
+    if (!img) return;
+    if (img.closest('.tile') || img.closest('.panel') || img.hasAttribute('data-lightbox')) {
+      openLightbox(img);
+    }
+  });
+
+  // Click outside the image to close
+  lb.addEventListener('click', (e) => {
+    if (e.target === lb) closeLightbox();
+  });
+
+  // Esc to close
+  document.addEventListener('keydown', (e) => {
+    if (!lb.hidden && (e.key === 'Escape' || e.key === 'Esc')) closeLightbox();
+  });
+})();
+</script>
+
+
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
