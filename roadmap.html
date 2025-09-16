@@ -31,28 +31,28 @@
   <main class="container section">
     <h1>Version 1.0.0 Roadmap</h1>
 
-    <p>This page contains the roadmap for the 1.0.0 release</p>
+    <div>This page contains the roadmap for the 1.0.0 release. [X] means it's fixed but not yet released.</div>
+	<div>Released items will be removed from this list.</div>
 
     <h2>Known issues</h2>
 	<ul>
-		<li>Unity splash screen has old game name</li>
-		<li>Cabin clock time in classic mode is missing</li>
-		<li>Quit doesn't really quit on Android</li>
-		<li>Quit does nothing in WebGL</li>
-		<li>No resolutions in WebGL</li>
-		<li>Changing resolution only applied after restart on windows</li>
-		<li>Score without combo needs to be applied directly (currently disappears)</li>
-		<li>Console log: Material 'StartBackgroundMaterial' with Shader 'Shader Graphs/MenuButtonShaderGraph' doesn't have a texture property '_MainTex'</li>
-		<li>Remove console info log message</li>
-		<li>WebGL weird issues > Fullscreen permission denied</li>
-		<li>WebGL weird issues > IndexOutOfBounds (memory issue, might be resolved - max memory was increased and stacktraces are now enabled)</li>
-		<li>Linux brightness slider is sticky</li>
-		<li>Lightning music speed doesn't reset on retry
+		<li>[X] Unity splash screen has old game name (remove this)</li>
+		<li>[X] Cabin clock time in classic mode is missing</li>
+		<li>[X] Quit does nothing in WebGL</li>
+		<li>[X] No resolutions in WebGL</li>
+		<li>[X] Changing resolution only applied after restart on windows</li>
+		<li>[X] Score without combo needs to be applied directly (currently disappears)</li>
+		<li>[X] WebGL weird issues > Fullscreen permission denied > should be resolved by using quality instead of resolution</li>
+		<li>[X]? WebGL weird issues > IndexOutOfBounds</li>
+		<li>[X] Linux brightness slider is sticky (unable to reproduce, very sad)</li>
+		<li>[X] Tiles matched stat is incorrect</li>
+		<li>[X] Lightning music speed doesn't reset on retry</li>
+		<li>[X] Leftover text in moon visible in graveyard level</li>
 	</ul>
 
     <h2>Gameplay improvements</h2>
 	<ul>
-		<li>Make combos a bit easier</li>
+		<li>[X] Make combos a bit easier</li>
 		<li>Lightning graveyard time-up music not obvious</li>
 		<li>Activate special gems at any time</li>
 	</ul>
@@ -71,6 +71,8 @@
 	<ul>
 		<li>Click confirm on level select</li>
 		<li>Click confirm on leaderboard type</li>
+		<li>[X] Display time spent in classic rather than current time on clocks</li>
+		<li>Brightness based on ambient color instead of post exposure?</li>
 	</ul>
 	
 	<h2>Misc. improvements</h2>
