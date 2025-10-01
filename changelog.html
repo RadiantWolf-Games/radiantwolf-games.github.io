@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Roadmap — Match FEAR</title>
+  <title>Changelog — Match FEAR</title>
   <meta name="description" content="Roadmap for Match FEAR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,64 +29,55 @@
   </header>
 
   <main class="container section">
-    <h1>Version 1.0.0 Roadmap</h1>
+    <h1>Changelog</h1>
 
-    <div>This page contains the roadmap for the 1.0.0 release. [X] means it's fixed but not yet released.</div>
-	<div>Released items will be removed from this list.</div>
-
-    <h2>Known issues</h2>
+    <h2>1.0.0b2</h2>
+	<h3>Resolved bugs</h3>
 	<ul>
-		<li>[X] Unity splash screen has old game name (remove this)</li>
-		<li>[X] Cabin clock time in classic mode is missing</li>
-		<li>[X] Quit does nothing in WebGL</li>
-		<li>[X] No resolutions in WebGL</li>
-		<li>[X] Changing resolution only applied after restart on windows</li>
-		<li>[X] Score without combo needs to be applied directly (currently disappears)</li>
-		<li>[X] WebGL issues > Fullscreen permission denied</li>
-		<li>[X] WebGL issues > IndexOutOfBounds</li>
-		<li>[X] Linux brightness slider is sticky (unable to reproduce, very sad)</li>
-		<li>[X] Tiles matched stat is incorrect</li>
-		<li>[X] Lightning music speed doesn't reset on retry</li>
-		<li>[X] Leftover text in moon visible in graveyard level</li>
-		<li>[X] Underwater effect can stick in ocean level when changing maps instead of restarting</li>
-		<li>[X] Rocking chair in cabin no longer appears</li>
+		<li>Unity splash screen has old game name (remove this)</li>
+		<li>Cabin clock time in classic mode is missing</li>
+		<li>Quit does nothing in WebGL</li>
+		<li>No resolutions in WebGL</li>
+		<li>Changing resolution only applied after restart on windows</li>
+		<li>Score without combo needs to be applied directly (currently disappears)</li>
+		<li>WebGL issues > Fullscreen permission denied</li>
+		<li>WebGL issues > IndexOutOfBounds</li>
+		<li>Linux brightness slider is sticky (unable to reproduce, very sad)</li>
+		<li>Tiles matched stat is incorrect</li>
+		<li>Lightning music speed doesn't reset on retry</li>
+		<li>Leftover text in moon visible in graveyard level</li>
+		<li>Underwater effect can stick in ocean level when changing maps instead of restarting</li>
 	</ul>
 
-    <h2>In-game improvements</h2>
+    <h3>In-game improvements</h3>
 	<ul>
 		<li>[X] Make combos a bit easier</li>
 		<li>Lightning graveyard time-up music not obvious</li>
 		<li>Activate special gems at any time</li>
 		<li>[X] Alt ocean powerup more visible</li>
 		<li>[X] Alt ocean sound louder</li>
-		<li>[X] Increased chance of knock followup in cabin</li>
-		<li>[X] Minimum clear score for powerup (double-trigger clears nothing)</li>
-		<li>[X] Brighter painting in cabin</li>
-		<li>Less random powerups with 5+ matches</li>
+		<li>[!] Increased chance of knock followup in cabin</li>
+		<li>Double-check minimum clear score for powerup (e.g. double-trigger clears nothing in graveyard)</li>
+		<li>Brighter painting in cabin</li>
 	</ul>
 	
 	<h2>Main menu improvements</h2>
 	<ul>
-		<li>[X] Soft glow menu title</li>
-		<li>[X] Soft flickering background light menu top</li>
-		<li>[X] Hard flickering background light menu top alt</li>
-		<li>[X] Display level names during level select (vhs tapes)</li>
-		<li>[X] Better visibility for TVs (higher default brightness)</li>
-	</ul>
-	
-	<h2>Main menu reworks</h2>
-	<ul>
+		<li>Higher contrast menu title</li>
+		<li>Flickering background light menu top</li>
 		<li>Better gem in-game in main menu > rewrite gem shader and add fresnel (bonus = real reflections, but might be too annoying)</li>
 		<li>Link levels somehow (e.g. map below monitors in level select)</li>
+		<li>[X] Display level names during level select (vhs tapes)</li>
+		<li>[X] Better visibility for TVs (higher default brightness)</li>
 	</ul>
 	
 	<h2>UI improvements</h2>
 	<ul>
 		<li>[X] Click confirm on level select</li>
-		<li>[X] Click confirm on leaderboard type</li>
+		<li>Click confirm on leaderboard type</li>
 		<li>[X] Display time spent in classic rather than current time on clocks</li>
-		<li>[X] Less intense brightness controls</li>
-		<lI>[X] Allow escape / reset during gameover</li>
+		<li>Brightness based on ambient color instead of post exposure?</li>
+		<lI>Allow escape / reset during gameover</li>
 	</ul>
 	
 	<h2>Misc. improvements</h2>
@@ -107,37 +98,7 @@
 		<li>Development log update</li>
 		<li>Post on X / Reddit / Epic EOS games forum</li>
 	</ul>
-	
-	<p></p>
-	<h2>Version 1.0.1</h2>
-	<h3>Main menu statistics</h3>
-	<ul>
-		<li>Global statistics</li>
-		<li>Leaderboards view per-level</li>
-		<li>Leaderboards toggle general/friends</li>
-	</ul>
-	
-	<h3>UI improvements</h3>
-	<ul>
-		<li>No more moves</li>
-		<li>Time up</li>
-		<li>Score</li>
-	</ul>
-	
-	<h2>Version 1.1.0</h2>
-	<h3>General improvements</h3>
-	<ul>
-		<li>Scarier forest (e.g. dead > living)</li>
-	</ul>
-	
-	<h3>Visualized (in)sanity</h3>
-	<ul>
-		<li>Setup symmetrical background texture</li>
-		<li>Link background texture to insanity</li>
-		<li>Add shader for fancy effect</li>
-	</ul>
   </main>
-
   <footer class="footer">
     <div class="container cols">
       <div class="small">© <span id="year"></span> RadiantWolf Games</div>
